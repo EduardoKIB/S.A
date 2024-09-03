@@ -10,6 +10,7 @@ function Home() {
     <form action="form">
         <p>Tela de cadastro <Link to='/cadastro' className='link'>Entrar</Link></p>
         <p>Tela de login <Link to='/login' className='link'>Entrar</Link></p>
+        <p>Tela de sobre <Link to='/sobre' className='link'>Entrar</Link></p>
     </form>
     </>
   )
