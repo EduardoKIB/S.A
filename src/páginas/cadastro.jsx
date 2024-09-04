@@ -1,35 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
 
 function Cadastro() {
-  
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    navigate('/'); 
+  };
+
   return (
     <>
       <div className="container">
         <div className="align">
           <h1 className='bigger'>Detalhes do Hóspede</h1>
           
-          <form className="form">
+          <form className="form" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name">Nome</label>
-              <input type="text" id="name" placeholder='Nome' />
+              <input type="text" id="name" placeholder='Nome' required/>
             </div>
             <div>
               <label htmlFor="phone">Telefone</label>
-              <input type="tel" id="phone" placeholder='Telefone' />
+              <input type="tel" id="phone" placeholder='Telefone' required/>
             </div>
             <div>
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder='Email' />
+              <input type="email" id="email" placeholder='Email' required/>
             </div>
             <div>
               <label htmlFor="country">País</label>
-              <input type="text" id="country" placeholder='País' />
+              <input type="text" id="country" placeholder='País' required/>
             </div>
             <div>
               <label htmlFor="password">Senha</label>
-              <input type="password" id="password" placeholder='Senha' />
+              <input type="password" id="password" placeholder='Senha' required/>
             </div>
             <button type="submit" className="register-button">Cadastrar</button>
           </form>
