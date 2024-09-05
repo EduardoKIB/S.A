@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import './App.css';
 
 import Cadastro from './páginas/cadastro';
 import Login from './páginas/login';

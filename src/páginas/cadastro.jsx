@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import { useNavigate } from 'react-router-dom';
-
+import Logo from '../img/logo.png'; // Ajuste o caminho se necessário
 function Cadastro() {
   const navigate = useNavigate();
 
@@ -13,6 +13,9 @@ function Cadastro() {
 
   return (
     <>
+    <header className="header">
+        <img src={Logo} alt="Logo" style={{ width: '100px', height: 'auto' }} />
+        </header>
       <div className="container">
         <div className="align">
           <h1 className='bigger'>Detalhes do Hóspede</h1>
